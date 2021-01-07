@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "3.22.0"
     }
   }
 }
@@ -28,5 +28,5 @@ resource "aws_s3_bucket" "b" {
   bucket = "${local.bucket-name}-${count.index}"
   acl    = "public-read"
 
-  count = 50
+  count = 2
 }
